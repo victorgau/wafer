@@ -12,7 +12,7 @@ def examine(filename, outdir='results'):
     #df = pd.read_excel("轉換前資料.xlsx",skiprows=10)
     df = pd.read_csv(filename, sep='\t', skiprows=10)
 
-    prefix = re.split(r'[\\ /.]', filename)[-2] + "_" 
+    prefix = re.split(r'[\\ /.]', filename)[-2] 
 
     if not os.path.exists(outdir):
         os.makedirs(outdir)
@@ -58,71 +58,71 @@ def examine(filename, outdir='results'):
     # 畫出 VBR 彩色圖
     fig = plt.figure(figsize=(20,20))
     ax = sns.heatmap(vbr)
-    plt.title('VBR COLOR')
-    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, 'VBR'))
+    plt.title(prefix + ' VBR COLOR')
+    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, '-VBR'))
     plt.close(fig)
 
     # 畫出 VBR 正常與否的兩色圖
     fig = plt.figure(figsize=(20,20))
     ax = sns.heatmap(vbr_b)
-    plt.title('VBR BW')
-    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, 'VBR_BW'))
+    plt.title(prefix + ' VBR BW')
+    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, '-VBR_BW'))
     plt.close(fig)
 
     # 畫出 VF1 彩色圖
     fig = plt.figure(figsize=(20,20))
     ax = sns.heatmap(vf1)
-    plt.title('VF1 COLOR')
-    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, 'VF1'))
+    plt.title(prefix + ' VF1 COLOR')
+    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, '-VF1'))
     plt.close(fig)
 
     # 畫出 VF1 正常與否的兩色圖
     fig = plt.figure(figsize=(20,20))
     ax = sns.heatmap(vf1_b)
-    plt.title('VF1 BW')
-    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, 'VF1_BW'))
+    plt.title(prefix + ' VF1 BW')
+    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, '-VF1_BW'))
     plt.close(fig)
 
     # 畫出 VF2 彩色圖
     fig = plt.figure(figsize=(20,20))
     ax = sns.heatmap(vf2)
-    plt.title('VF2 COLOR')
-    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, 'VF2'))
+    plt.title(prefix + ' VF2 COLOR')
+    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, '-VF2'))
     plt.close(fig)
 
     # 畫出 VF2 正常與否的兩色圖
     fig = plt.figure(figsize=(20,20))
     ax = sns.heatmap(vf2_b)
-    plt.title('VF2 BW')
-    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, 'VF2_BW'))
+    plt.title(prefix + ' VF2 BW')
+    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, '-VF2_BW'))
     plt.close(fig)
 
     # 畫出 IR_40V 彩色圖
     fig = plt.figure(figsize=(20,20))
     ax = sns.heatmap(ir_40v)
-    plt.title('IR_40V COLOR')
-    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, 'IR_40V'))
+    plt.title(prefix + ' IR_40V COLOR')
+    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, '-IR_40V'))
     plt.close(fig)
 
     # 畫出 IR_40V 正常與否的兩色圖
     fig = plt.figure(figsize=(20,20))
     ax = sns.heatmap(ir_40v_b)
-    plt.title('IR_40V BW')
-    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, 'IR_40V_BW'))
+    plt.title(prefix + ' IR_40V BW')
+    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, '-IR_40V_BW'))
     plt.close(fig)
 
     # 畫出 VF3 彩色圖
     fig = plt.figure(figsize=(20,20))
     ax = sns.heatmap(vf3)
-    plt.title('VF3 COLOR')
-    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, 'VF3'))
+    plt.title(prefix + ' VF3 COLOR')
+    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, '-VF3'))
     plt.close(fig)
 
     # 畫出 VF3 正常與否的兩色圖
     fig = plt.figure(figsize=(20,20))
     ax = sns.heatmap(vf3_b)
-    plt.title('VF3 BW')
-    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, 'VF3_BW'))
+    plt.title(prefix + ' VF3 BW')
+    plt.savefig('{}/{}{}.jpg'.format(outdir, prefix, '-VF3_BW'))
     plt.close(fig)
 
 if __name__=="__main__":
